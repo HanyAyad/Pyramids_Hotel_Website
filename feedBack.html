@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Feedback - Pyramids</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    color: var(--main-color);
+  }
+
+  form {
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 8px;
+  }
+
+  h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+      font-size: 26px;
+
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea
+   {
+    border: 2px black;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+   background-color: rgba(57, 57, 57, 0.07);
+    color: var(--main-color);
+    margin-bottom: 30px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+  }
+
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+  }
+
+  .btttn {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color:  var(--main-color);
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid  var(--main-color);
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  legend {
+    font-size: 2.1em;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+      font-size: 18px;
+  }
+
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+
+.halves {display: flex; flex-flow: row wrap;
+height: auto; width:auto;}
+.formfeed {width: 300px;  margin-top:auto; margin-bottom: auto;}
+.image {display: flex ;width:150px; ;height:640px; margin:30px;}
+  .number {
+    background-color:  var(--main-color);
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+  @media screen and (min-width: 480px) {
+
+    form {
+      max-width: 680px;
+    }
+
+  }
+  </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+       <div class="container" style="padding-top: 1rem">
+           <nav class="navbar">
+               <a class="logo" href="index.html">Pyramids</a>
+               <input type="checkbox" id="check">
+               <label for="check">
+                   <i class="fas fa-bars" id="open"></i>
+                   <i class="fas fa-times" id="close"></i>
+               </label>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                    <li class="nav-item"><a href="spa.html" class="nav-link">Spa</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li class="nav-item"><a href="map.html" class="nav-link">Map</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                    <li class="nav-item"><a href="feedBack.html" class="nav-link">FeedBack</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                          <button class="dropbtn">Account<i class="fa fa-caret-down"></i></button>
+                          <div class="dropdown-content">
+                            <a href="registration.html" class="nav-link">Register</a>
+                            <a href="login.html" class="nav-link">Log in</a>
+                      </div>
+                    </li>
+                    <li class="nav-item"><a href="rooms.html" class="nav-link book-btn">Book</a></li>
+                </ul>
+                                             <div style="width: 100px; padding-left: 150px">
+                      <select id="theme-selector" class="nav-list" >
+                         <option class="nav-link" value="default">Default</option>
+                         <option class="nav-item" value="dark">Blue mode</option>
+                         <option class="nav-item" value="black">Dark mode</option>
+                         <option class="nav-item" value="bl">Purple mode</option>
+                        </select>
+                     </div>
+
+           </nav>
+       </div>
+  <!-- Feedback Form -->
+
+  <form action="index.html" method="post">
+
+    <h1>Feedback</h1>
+<div class="halves">
+      <div class="formfeed">
+    <fieldset>
+      <legend><span class="number">1</span>Your Info</legend>
+      <p style="margin-bottom: 8px; font-size: 18px;"> Name:</p>
+      <input type="text" id="name" name="user_name" >
+
+      <p style="margin-bottom: 8px; font-size: 18px;"> Email:</p>
+      <input type="email" id="mail" name="user_email">
+
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="number">2</span>Your Feedback</legend>
+
+      <textarea id="FeedbackBox" name="user_feed"></textarea>
+    </fieldset>
+      <fieldset>
+      <legend><span class="number">3</span>Your Rating</legend>
+<div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+</div>
+    </fieldset>
+    <button class="btttn" type="submit">Submit</button>
+  </form>
+  </div>
+  <div class="image">
+    <img src="https://www.thespruce.com/thmb/j05RKc2hqf9VB7f46EirnYa8bUk=/1414x1414/smart/filters:no_upscale()/business-handshake-in-glass-reflection-in-office-675872871-31a95e1d4fd8433088e738228fd9d3dc.jpg" alt="shakehand">
+
+  </div>
+</div>
+  <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container" style="color:#fff;">
+            <div class="back-to-top">
+                <a href="#"><i class="fas fa-chevron-up"></i></a>
+            </div>
+            <div class="footer__content row">
+                <div class="col-3">
+                    <h4>About</h4>
+                    <p>The Pyramids’s legend dates back to 1865, when The Cairo, Egypt opened as Africa’s first 'Grand Hotel'. 1865 is Cairo Hospitality Group's way of expressing appreciation for valuable guest support to our collection of hotels.</p>
+                </div>
+                <div class="col-3">
+                    <h4>Payment Methods</h4>
+                    <p>Pay any way you choose, we support all payment options</p>
+                    <ul class="payment-methods">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-paypal"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-cc-visa"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-apple-pay"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4>Get Social</h4>
+                    <p>Follow us on social media and keep in touch with Pyramids.</p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-tripadvisor"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

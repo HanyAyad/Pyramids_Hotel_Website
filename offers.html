@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Offers - Pyramids</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #384047;
+
+      }
+
+p {margin-top: 10px;}
+
+      h1 {padding: 19px 39px 18px 39px;
+        text-align: center;
+          font-size: 47px;
+          margin-top: 20px;
+      color:  var(--main-color)}
+
+          li {margin-bottom: 10px;}
+
+      .btttn {
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        background-color:  var(--main-color);
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 5px;
+        width: 50%;
+        border: 1px solid  var(--main-color);
+        border-width: 1px 1px 3px;
+        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      fieldset {
+        margin-bottom: 30px;
+        border: none;
+      }
+
+      legend {
+        font-size: 2.1em;
+        margin-bottom: 10px;
+      }
+
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+          font-size: 18px;
+      }
+
+      label.light {
+        font-weight: 300;
+        display: inline;
+
+      }
+      .col-md-6 {margin: 30px;}
+      .mar-b {
+      	margin-bottom: 10px;
+      }
+
+      .Offer-txt {
+          font-size: 18px;
+      	margin: 0px 0px 0px;
+          color: var(--main-color);
+      }
+
+      	.Offer-txt h3 {
+      		color:  var(--main-color);
+      		font-weight: bold;
+      		margin-bottom: 30px;
+      		position: relative;
+      	}
+
+      		.Offer-txt h3::after {
+      			background-color:  var(--main-color);
+      			position: absolute;
+      			content: '';
+      			width: 40%;
+      			height: 4px;
+      			left: 0;
+      			bottom: -10px;
+      		}
+
+      	.Offer-txt.terms {
+      		margin-bottom: 35px;
+      	}
+
+      		.Offer-txt.terms ul li {
+      			list-style: circle;
+      			margin-left: 20px;
+      		}
+         /*slideshow*/
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+       <div class="container" style="padding-top: 1.5rem">
+           <nav class="navbar">
+               <a class="logo" href="index.html">Pyramids</a>
+               <input type="checkbox" id="check">
+               <label for="check">
+                   <i class="fas fa-bars" id="open"></i>
+                   <i class="fas fa-times" id="close"></i>
+               </label>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                    <li class="nav-item"><a href="spa.html" class="nav-link">Spa</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li class="nav-item"><a href="map.html" class="nav-link">Map</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                    <li class="nav-item"><a href="feedBack.html" class="nav-link">FeedBack</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                          <button class="dropbtn">Account<i class="fa fa-caret-down"></i></button>
+                          <div class="dropdown-content">
+                            <a href="registration.html" class="nav-link">Register</a>
+                            <a href="login.html" class="nav-link">Log in</a>
+                      </div>
+                    </li>
+                    <li class="nav-item"><a href="rooms.html" class="nav-link book-btn">Book</a></li>
+                </ul>
+                                             <div style="width: 100px; padding-left: 150px">
+                      <select id="theme-selector" class="nav-list" >
+                         <option class="nav-link" value="default">Default</option>
+                         <option class="nav-item" value="dark">Blue mode</option>
+                         <option class="nav-item" value="black">Dark mode</option>
+                         <option class="nav-item" value="bl">Purple mode</option>
+                        </select>
+                     </div>
+
+           </nav>
+       </div>
+
+       <!--Cover-->
+    <div class="slideshow-container" >
+
+<div class="mySlides fade" style="background-image: url('https://www.travelplusstyle.com/wp-content/gallery/the-mira-hong-kong/tmhk_green-city-room_res.jpg');-->
+<!--  background-size: cover; height: 600px; padding-top:80px;">
+  <div class="numbertext">1 / 3</div>
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade" style="background-image: url('https://www.cthawards.com/wp-content/uploads/2013/10/level-4-diploma-hospitality-management.jpg');-->
+<!--  background-size: cover; height: 600px; padding-top:80px;">
+  <div class="numbertext">2 / 3</div>
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade" style="background-image: url('https://images.unsplash.com/photo-1598902590916-fd8d890ff798?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80');-->
+<!--  background-size: cover; height: 600px; padding-top:80px;">
+  <div class="numbertext">3 / 3</div>
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+  </div>
+       <!--Offers_Page-->
+       <div class="container" style="color: black">
+    <h1>Our Exclusive Offers</h1>
+         <section class="space-v">
+             <div class="contain">
+                         <div class="row mar-b">
+                             <div class="col-md-6" >
+                                 <img src="http://cdn.cnn.com/cnnnext/dam/assets/140127103345-peninsula-shanghai-deluxe-mock-up.jpg" width="550" height ="400" class="img-fluid" alt="Stay Longer Save More at THE G!">
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="Offer-txt terms" style="margin-bottom:10px;max-width: 500px">
+                                     <h3>Stay Longer Save More!</h3>
+                                     <p><p> 31/8 and enjoy a daily complimentary breakfast for two at our VIP Restaurant, in-room breakfast once/week and 20% off laundry.</p>
+<p>       <ul>
+       <li>7 nights <strong>Get 15% off</strong></li>
+       <li>14 nights <strong>Get 20% off</strong></li>
+       </ul>
+</p>
+       <p>on Bed & Breakfast rate*</p>
+       <p><strong>Terms and Conditions Apply:</strong></p>
+      <p>
+        <ul>
+          <li>Extended nights are determined as a new booking and no retro-active discount applies.</li>
+          <li>This offer is subject to availability at the time of booking.</li>
+          <li>Hotel early departure fee applies.</li>
+          <li>This offer is non-refundable and not valid in conjunction with any other promotion.</li>
+    
+        </ul>
+       </p>
+      <button type="submit" class="book-btn btttn">Get Offer</button>
+
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="row mar-b">
+                             <div class="col-md-6">
+                                 <div class="Offer-txt terms" style="max-width: 500px">
+                                     <h3>Don’t Miss Out 10% Early Bird Discount!</h3>
+                                     <div><p>Hurry up and book at THE G from 15/4 till 15/6 and <strong>save up to 10%</strong> on your stay from 1/5 till 31/10.</p></div>
+
+                                       <div><p><strong>Terms and Conditions Apply:</strong></p></div>
+                                      <p>
+                                        <ul>
+                                         <li>This offer is non-refundable, pre-payment of the full amount is required at the time of booking.</li>
+                                         <li>Offer not valid in conjunction with any other promotion.</li>
+                                         <li>Black-out dates from 12/5 till 16/5 & from 15/7 till 24/7.</li>
+                                         <li>Offer is subject to availability at the time of booking.</li>
+                                       </ul>
+                                     </p>
+                                     <button type="submit" class="book-btn btttn">Get Offer</button>
+                         </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <img src="https://i.pinimg.com/originals/ed/cf/be/edcfbedcb31471868e328307889cfd16.jpg" width="550" height ="400" class="img-fluid" alt="Stay Longer Save More at THE G!">
+                             </div>
+                         </div>
+                         <div class="row mar-b">
+                             <div class="col-md-6">
+                                 <img src="https://purewows3.imgix.net/images/articles/2019_08/Grand_Velas.jpeg?auto=format,compress&cs=strip" width="550" height ="400" class="img-fluid" alt="Stay Longer Save More at THE G!" >
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="Offer-txt terms"  style="max-width: 500px">
+                                     <h3>15% Off Our Hotel's Glorious  Weekday Escape!</h3>
+
+                                     <p>Stay one night or more at Our Hotel from 1/5 till 31/10 - Saturday till Thursday last check out - <strong>save up to 15% </strong>on published rates*</p>
+       <p><strong>Terms and Conditions Apply:</strong></p>
+       <p>
+         <ul>
+           <li>Published rates apply from Thursday (last check-out) and Friday.</li>
+           <li>Black-out dates apply from 12/5 till 16/5 and from 15/7 till 24/7.</li>
+             <li>This offer is not valid in conjunction with any other promotion.</li>
+           <li>Flexible check-in and check-out subject to Hotel availability.</li>
+        </ul>
+      </p>
+      <button type="submit" class="book-btn btttn">Get Offer</button>
+
+
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="row mar-b">
+                             <div class="col-md-6">
+                                 <div class="Offer-txt terms"  style="max-width: 500px">
+                                     <h3>10% Discount  On Family Fun at Our Hotel</h3>
+                                     <div><p>Getaway with your family from 1/5 till 15/7 and<strong> save up to 10%</strong> on your choice of the suite, Penthouse or Shell Houses, ideal for 4 up to 6 people.</p></div>
+
+
+       <div><p><strong>Terms and Conditions Apply:</strong></p></div>
+    <div>
+       <p>
+         <ul>
+           <li>Book from 15/4 till 15/6 for a minimum of 2 nights.</li>
+           <li>Inquire on our maximum occupancy for each unit.</li>
+           <li>This offer is subject to availability at the time of booking.</li>
+           <li>Immediate full payment at the time of booking and up to 3 days cancellation, 1 night penalty.</li>
+           <li>Hotel early departure fee applies.</li>
+       </ul>
+      </p>
+      <button type="submit" class="book-btn btttn">Get Offer</button>
+    </div>
+
+                                 </div>
+                             </div>
+                             <div class="col-md-6">
+                                 <img src="https://img-new.cgtrader.com/items/1982609/ea51177137/modern-luxury-hotel-room-design-3d-model-max.jpg" width="550" height ="400" class="img-fluid" alt="Stay Longer Save More at THE G!">
+                             </div>
+                         </div>
+                         <div class="row mar-b">
+                             <div class="col-md-6">
+                                 <img src="https://www.chinadaily.com.cn/china/images/attachement/jpg/site1/20170908/484d7ec7b0121b1c1b5608.jpg" width="550" height ="400" class="img-fluid" alt="Stay Longer Save More at THE G!">
+                             </div>
+                             <div class="col-md-6">
+                                 <div class="Offer-txt terms"  style="max-width: 500px">
+                                     <h3>Fall In Love With  Our Hotel - Honeymooners Package</h3>
+                                     <div><p>Stay at Our hotel from 1/5 till 31/10 and choose from a variety of units, ranging from Pool or Sea View Deluxe Room, the Loft or the Suite.</p></div>
+       <div><p>Enjoy welcome amenities, a one time complimentary in-suite breakfast and guaranteed late check-out till 6 pm.</p></div>
+
+       <div><p><strong>Terms and Conditions Apply:</strong></p></div>
+       <div>
+       <p>
+         <ul>
+           <li>Immediate full payment at the time of booking up to 3 days cancellation, 1 night penalty.</li>
+           <li>Black-out dates apply from 12/5 till 16/5 and from 15/7 till 24/7.</li>
+           <li>This offer is not valid in conjunction with any other promotion.</li>
+           <li>Offer subject to availability at the time of booking.</li>
+        </ul>
+      </p>
+      <button type="submit" class="book-btn btttn">Get Offer</button>
+       </div>
+
+                                 </div>
+                             </div>
+                         </div>
+             </div>
+         </section>
+       </div>
+       <!-- FOOTER SECTION -->
+         <footer>
+             <div class="container" style="color: white">
+                 <div class="back-to-top">
+                     <a href="#"><i class="fas fa-chevron-up"></i></a>
+                 </div>
+                 <div class="footer__content row">
+                     <div class="col-3">
+                         <h4>About</h4>
+                    <p>The Pyramids’s legend dates back to 1865, when The Cairo, Egypt opened as Africa’s first 'Grand Hotel'. 1865 is Cairo Hospitality Group's way of expressing appreciation for valuable guest support to our collection of hotels.</p>
+                     </div>
+                     <div class="col-3">
+                         <h4>Payment Methods</h4>
+                         <p>Pay any way you choose, we support all payment options</p>
+                         <ul class="payment-methods">
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-paypal"></i>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-cc-visa"></i>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-cc-mastercard"></i>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-apple-pay"></i>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="col-3">
+                         <h4>Get Social</h4>
+                         <p>Follow us on social media and keep in touch with Pyramids.</p>
+                         <ul class="social-icons">
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-facebook-f"></i>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-twitter"></i>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-instagram"></i>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     <i class="fab fa-tripadvisor"></i>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

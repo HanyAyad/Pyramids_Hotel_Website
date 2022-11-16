@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Pyramids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/app.js"></script>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="container" style="padding-top: 1rem">
+        <nav class="navbar">
+            <a class="logo" href="index.html">Pyramids</a>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="open"></i>
+                <i class="fas fa-times" id="close"></i>
+            </label>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                    <li class="nav-item"><a href="spa.html" class="nav-link">Spa</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li class="nav-item"><a href="map.html" class="nav-link">Map</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                    <li class="nav-item"><a href="feedBack.html" class="nav-link">FeedBack</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                          <button class="dropbtn">Account<i class="fa fa-caret-down"></i></button>
+                          <div class="dropdown-content">
+                            <a href="registration.html" class="nav-link">Register</a>
+                            <a href="login.html" class="nav-link">Log in</a>
+                      </div>
+                    </li>
+                    <li class="nav-item"><a href="rooms.html" class="nav-link book-btn">Book</a></li>
+                </ul>
+                              <div style="width: 100px; padding-left: 150px">
+                      <select id="theme-selector" class="nav-list" >
+                         <option class="nav-link" value="default">Default</option>
+                         <option class="nav-item" value="dark">Blue mode</option>
+                         <option class="nav-item" value="black">Dark mode</option>
+                         <option class="nav-item" value="bl">Purple mode</option>
+                        </select>
+                     </div>
+
+
+        </nav>
+    </div>
+
+    <!-- ROOMS LIST -->
+    <section id="rooms-list" class="rooms-list">
+        <div class="container container-medium">
+            <div class="row row-2">
+                <h2>Rooms</h2>
+                <select onchange="if (this.value === '-1') vertical();if (this.value === '1' ) grid()">
+                    <option value="1">Grid View</option>
+                    <option value="-1">Vertical View</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="room-image">
+                        <img src="https://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg/listingitem" alt="room">
+                    </div>
+                    <div class="room-info">
+                        <div>
+                            <h4>Deluxe Black Room</h4>
+                            <p>A spacious deluxe room which has a double bed and a single bed. Ideal for families</p>
+                            <p class="price"><span>$200</span> / night</p>
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room-image">
+                        <img src="https://www.langhamhotels.com/cdn-4fdea273/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-grand-room-1680-945.jpg" alt="room">
+                    </div>
+                    <div class="room-info">
+                        <div>
+                            <h4>Studio Broadway Room</h4>
+                            <p>Classically decorated and elegantly detailed ,with one bed. Ideal for any couple</p>
+                            <p class="price"><span>$150</span> / night</p>
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="room-image">
+                        <img src="https://www.langhamhotels.com/cdn-4fdea4b1/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-grand-river-view-room-1680-945.jpg" alt="room">
+                    </div>
+                    <div class="room-info">
+                        <div>
+                            <h4>Standard One Person Room</h4>
+                            <p>Overlooking the picturesque Nile River, a sophisticated space with the latest in modern conveniences.Ideal for any signle person </p>
+                            <p class="price"><span>$150</span> / night</p>
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room-image">
+                        <img src="https://www.langhamhotels.com/cdn-4fdea372/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic-junior-suite-1680-945.jpg" alt="room">
+                    </div>
+                    <div class="room-info">
+                        <div>
+                            <h4>JUNIOR SUITE
+</h4>
+                            <p>A spacious suite designed with a stylish mix of classic and contemporary eleganc.The latest in technological amenities offer conveniences for the modern traveller. </p>
+                            <p class="price"><span>$500</span> / night</p>
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="room-image">
+                        <img src="https://www.langhamhotels.com/cdn-4fdea331/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-infinity-suite-parlour-with-piano-1680-945.jpg/listingitem" alt="room">
+                    </div>
+                    <div class="room-info">
+                        <div>
+                            <h4>INFINITY SUITE
+</h4>
+                            <p>An opulent retreat in the heart of the city. Two elegantly appointed bedrooms with ensuite bathrooms.</p>
+                            <p class="price"><span>$1000</span> / night</p>
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room-image">
+                        <img src="https://www.langhamhotels.com/cdn-4fdea38e/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic-river-view-suite-living-room-daytime-1680-945.jpg" alt="room">
+                    </div>
+                    <div class="room-info">
+                        <div>
+                            <h4>ONE BEDROOM LAKE VIEW SUITE
+</h4>
+                            <p>Delight in a luxurious haven set above the city. Our Lake View Suite offers panoramic views of the Nile River. </p>
+                            <p class="price"><span>$850</span> / night</p>
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Table SECTION -->
+        <section style="padding-left: 100px">
+        <h2 class="headline" style="text-align: center; color: var(--main-color);padding-bottom: 20px">Available Dates</h2>
+        <div class="timetable">
+             <div class="week-names">
+               <div>saturday</div>
+               <div>sunday</div>
+               <div>monday</div>
+               <div>tuesday</div>
+               <div>wednesday</div>
+               <div>thursday</div>
+               <div>friday</div>
+              </div>
+             <div class="rooms-avail">
+                 <div>Room 1</div>
+                 <div>Room 2</div>
+                 <div>Room 3</div>
+                 <div>Room 4</div>
+                  <div>Room 5</div>
+                  <div>Room 6</div>
+             </div>
+             <div class="content">
+               <div>
+                <div class="selected"></div>
+             </div>
+             <div></div>
+             <div></div>
+             <div></div>
+            <div><div></div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div><div class="selected"></div>
+            </div>
+            <div></div>
+            <div class="selected"></div>
+            <div></div>
+            <div><div></div></div>
+    <div></div>
+    <div>
+      <div class="selected"></div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="selected"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div ></div>
+    <div>
+      <div class="selected"></div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="selected"></div>
+    <div></div>
+    <div class="selected"></div>
+    <div></div>
+    <div class="selected"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="selected"></div>
+    <div></div>
+  </div>
+</div>
+</section>
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container">
+            <div class="back-to-top">
+                <a href="#rooms-list"><i class="fas fa-chevron-up"></i></a>
+            </div>
+            <div class="footer__content row">
+                <div class="col-3">
+                    <h4>About</h4>
+                    <p>The Pyramids’s legend dates back to 1865, when The Cairo, Egypt opened as Africa’s first 'Grand Hotel'. 1865 is Cairo Hospitality Group's way of expressing appreciation for valuable guest support to our collection of hotels.
+</p>
+                </div>
+                <div class="col-3">
+                    <h4>Payment Methods</h4>
+                    <p>Pay any way you choose, we support all payment options</p>
+                    <ul class="payment-methods">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-paypal"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-cc-visa"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-apple-pay"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4>Get Social</h4>
+                    <p>Follow us on social media and keep in touch with Pyramids.</p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-tripadvisor"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
